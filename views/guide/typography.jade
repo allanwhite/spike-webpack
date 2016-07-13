@@ -2,7 +2,7 @@ extends /layout
 include /_includes/_mixins
 block content
     include /_partials/_nav-mobile
-    header.masthead.container-image-fill(data-interchange='[img/data-distortion-textures-@1x.png, small], [img/data-distortion-textures-@2x.png, large]')
+    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
         include /_partials/_nav-primary
         .row
             .small-12.columns
@@ -84,7 +84,7 @@ block content
                                 li Understand Grahame's thoughts around open-source and its importance
                                 li Discover the unrealized dream for FHIR and why Grahame wants to eventually come back to it
                         .columns.small-12.medium-12.large-6
-                            // example list using markdown
+                            // example list using markdown; Jade version below. If no special classes or tags are needed, markup works great.
                             :marked
                                 #### More key insights, in no particular order
                                 
@@ -122,22 +122,12 @@ block content
                             | .
                     p The modern need to outsource is rooted in the generational desire to be proactive. Hospitals are incessantly on the brink of slighting margins, increasing patient expectations and minimal federal support. However, hospitals now understand the costs of reactive, short-term, tactical solutions to immediate issues. The key to survival lies in leveraging organizational attributes while enacting continuous incremental improvements in effectiveness and efficiency – more often than not by using third-party vendors.
                     p With that said, healthcare entities need some benchmark metrics to assess the true value of an increased commitment to outsourcing its services at both holistic and strategic levels.
-                    ul
-                        li
-                            strong Employee Gratification
-                            | : Does internal staff experience increased satisfaction due to outsourced functions and being capable to invest more of time in strategic and innovative initiatives?
-                        li
-                            strong Consumer Satisfaction
-                            | : Is the outside provider delivering equal or increased service to consumers in contrast to in-house services? Is staff more attentive to core functions due to outsourcing?
-                        li
-                            strong Economic Value Contribution
-                            | : Does the external vendor deliver more efficiently to achieve cost savings? Is the entity able to evade additional costs by outsourcing?
-                        li
-                            strong Competitive Advantages
-                            | : Is there a competitive edge with outsourcing? Are prospective and existing clients increasing service engagements because of outsourced services?
-                        li
-                            strong Allocation of Resources
-                            | : Is the service provider reliably delivering the required quality and scope through dedicated resources: labor, technology, knowledge, and assets? Is the current allocation of resources appropriate for the agreed upon objective? Is the resource division mutually satisfactory?
+                    :marked
+                        -   **Employee Gratification**: Does internal staff experience increased satisfaction due to outsourced functions and being capable to invest more of time in strategic and innovative initiatives?
+                        -   **Consumer Satisfaction**: Is the outside provider delivering equal or increased service to consumers in contrast to in-house services? Is staff more attentive to core functions due to outsourcing?
+                        -   **Economic Value Contribution**: Does the external vendor deliver more efficiently to achieve cost savings? Is the entity able to evade additional costs by outsourcing?
+                        -   **Competitive Advantages**: Is there a competitive edge with outsourcing? Are prospective and existing clients increasing service engagements because of outsourced services?
+                        -   **Allocation of Resources**: Is the service provider reliably delivering the required quality and scope through dedicated resources: labor, technology, knowledge, and assets? Is the current allocation of resources appropriate for the agreed upon objective? Is the resource division mutually satisfactory?
                     p In sum, the advantages of outsourcing are that hospitals can assume access to asset improvement funds, widespread risk sharing, increased cost avoidance and savings, considerable resource access, enhanced employee retention, and raised patient satisfaction.  Long-term strategic, transformative partnerships with vendors may introduce market opportunities beyond either party’s core competence. A few long-term, strategic service vendors may be a more fruitful arrangement in comparison to a multitude of narrow-focused, short-term, one-off relationships.
                     p Questions? Reach out to us 
                         a(href='mailto:hello@catalyze.io') directly
