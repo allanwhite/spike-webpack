@@ -1,5 +1,9 @@
 extends /layout
 include /_includes/_mixins
+
+block prepend stylesheets
+    link(rel='stylesheet', href='/css/customview.css')
+
 block content
     include /_partials/_nav-mobile
     header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
