@@ -2,7 +2,7 @@ extends layout
 
 block content
     header.masthead.container-image-fill(data-interchange='[img/data-distortion-textures-@1x.png, small], [img/data-distortion-textures-@2x.png, large]')
-        //- != partial("/_partials/_nav-primary")
+        //- != partial('/_partials/_nav-primary')
         .row
             .small-12.columns
                 h1.header-masthead Style Guide & Examples
@@ -48,3 +48,76 @@ block content
                     p Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
                     p As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.
             hr.divider
+            .row
+                .column.text-center.section-article--header-group
+                    h2.section-article--header Focus on your core competency
+                    p.lead Stratum alleviates the burden of compliance so you can continue to do what you do best
+            .row.small-up-1.medium-up-2.large-up-3
+                .column.section-article--block
+                    img.icon-size--medium.svg-color--brand.inject-me(src='/img/svg/icon-large-data.svg')
+                    h4.section-article--feature-header We become your healthcare-focused DevOps team
+                    p Leverage our experience and expertise in healthcare technology to add value to your organization. You can put all your energy towards your innovative ideas—the thing that actually matters.
+                    button.button.button-hollow--secondary
+                        | Learn more 
+                        img.icon-size--small.svg-color--gray.inject-me(src='/img/svg-other/ic_chevron_right_24px.svg', alt='check')
+                .column.section-article--block
+                    img.icon-size--medium.svg-color--brand.inject-me(src='/img/svg/icon-large-hands-circle.svg')
+                    h4.section-article--feature-header Concentrate on the relationships that matter
+                    p Stratum immediately establishes credibility between the players who matter in healthcare. Health systems and vendors alike can work more freely together to innovate.
+                    button.button.button-hollow--secondary
+                        | Learn more 
+                        img.icon-size--small.svg-color--gray.inject-me(src='/img/svg-other/ic_chevron_right_24px.svg', alt='check')
+                .column.section-article--block
+                    img.icon-size--medium.svg-color--brand.inject-me(src='/img/svg/icon-large-lightbulb-circle.svg')
+                    h4.section-article--feature-header Spend energy and resources on innovation, not compliance
+                    p Achieving Triple Aim goals is the mandate for healthcare. We're all in this together, but it's only going to happen if you can concentrate on the innovations that get us there.
+                    button.button.button-hollow--secondary
+                        | Learn more 
+                        img.icon-size--small.svg-color--gray.inject-me(src='/img/svg-other/ic_chevron_right_24px.svg', alt='check')
+        section.section-article.container-color--gray-light
+            .row
+                .small-12.columns.text-center.section-article--header-group
+                    h1.section-article--header A subtle gray breaks up a long, white page.
+                    h2.section-article--subheader Draw from our luxurious selection of twelve hand-tinted shades of Stratum Gunmetal Gray.
+            .row
+                .small-12.medium-6.columns
+                    .callout.callout--hover
+                        h3 This panel is hoverfancy
+                        p This is a 
+                            a(href='http://google.github.io/material-design-icons/', title='Material Design Lite System') material-design-style
+                            |  effect, to make it appear to move toward the viewer a bit. Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae.
+                        button.button.info Call-to-Action 
+                            img.icon-size--small.svg-color--white.inject-me(src='/img/svg-other/ic_chevron_right_24px.svg', alt='check')
+                .small-12.medium-6.columns
+                    p Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
+                    p As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.
+            hr.divider
+            .row
+                .small-12.columns.text-center.section-article--header-group
+                    h1.section-article--header Responsive alternate content
+                    h2.section-article--subheader This block has alternative content on large and medium (tablet) breakpoints.
+                    img.show-for-xlarge-only(src='/img/svg/gfx-integration-timeline-desktop.svg', alt='integration')
+                    img.show-for-large-only(src='/img/svg/gfx-integration-timeline-desktop.svg', alt='integration')
+                    img.show-for-medium-only(src='/img/svg/gfx-integration-timeline-medium.svg', alt='integration')
+                    img.show-for-small-only(src='/img/svg/gfx-integration-timeline-small.svg', alt='integration')
+
+        section.section-article.container-color--gray
+            .row
+                .columns.text-center.section-article--header-group
+                    img.icon-size--large.svg-color--white.inject-me(src='/img/svg/icon-branding-stratum.svg', alt='logo')
+                    h2.section-article--subheader
+                        :marked
+                            Sometimes things get darkest before the dawn. This container has `.full-width` applied.
+                            
+                            1 per row on small • 2 per row on medium • 3 per row on large • 4 per row on xlarge
+
+            .row.full-width.small-up-1.medium-up-2.large-up-3.xlarge-up-4
+                //- ul
+                //-     each val, index in {1:'one',2:'two',3:'three'}
+                //-         li= index + ': ' + val
+                - var pangrams = ['How quickly daft jumping zebras vex.', 'Two driven jocks help fax my big quiz.', 'Jack, love my big wad of sphinx quartz!', 'Do wafting zephyrs quickly vex Jumbo?', 'Go, lazy fat vixen; be shrewd, jump quick.', 'Fickle jinx bog dwarves spy math quiz', 'Big dwarves heckle my top quiz of jinx', 'Fickle bog dwarves jinx empathy quiz', 'Public junk dwarves hug my quartz fox', 'Jumping hay dwarves flock quartz box']
+                - var lorems = ['Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam.', 'Donec a pretium odio, at efficitur nibh. Aliquam dui est, vulputate sit amet dapibus ut, ornare vel lectus. Phasellus malesuada venenatis neque, ac posuere velit sodales at.', 'Sed euismod sem turpis, eget accumsan lacus sollicitudin nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.', 'Curabitur velit urna, finibus ut mi ac, scelerisque volutpat quam. Duis massa augue, interdum eu vulputate vel, accumsan ut dolor.', 'Nam tempus orci leo, sed auctor libero auctor ut. Quisque scelerisque porttitor tortor maximus sodales.', 'Praesent a blandit massa. Nulla ut ipsum in justo commodo vehicula. Phasellus non nulla ac dolor molestie ultrices.']
+                each val, index in pangrams.length ? pangrams : ['There are no pangrams']
+                    .column.section-article--block
+                        h4.section-article--block-header.spaced-out= val
+                        p= lorems[index]
