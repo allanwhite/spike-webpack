@@ -19,7 +19,7 @@ module.exports = {
   posthtml: (ctx) => {
     return {
       defaults: [
-        jade({ filename: ctx.resourcePath, pretty: true, foo: 'bar' }),
+        jade({ filename: ctx.resourcePath, pretty: true, basedir: 'views' }),
         md(),
         retext([smartypants])
       ]
@@ -33,5 +33,7 @@ module.exports = {
     }
   },
   babel: { presets: [es2015, stage2] },
-  ignore: ['**/layout.jade', 'bower_components/**/*', 'bower.json', '**/_*', '**/.*']
+  ignore: ['**/layout.jade', 'bower_components/**/*', 'bower.json', '**/_*', '**/.*', '.DS_Store'],
+  cleanUrls: true,
+  vendor: 'assets/js/**'
 }

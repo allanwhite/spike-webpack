@@ -1,0 +1,144 @@
+extends /layout
+include /_includes/_mixins
+block content
+    include /_partials/_nav-mobile
+    header.masthead.container-image-fill(data-interchange='[./img/data-distortion-textures-@1x.png, small], [img/data-distortion-textures-@2x.png, large]')
+        include /_partials/_nav-primary
+
+        .row
+            .small-12.columns
+                h1.header-masthead Components & Objects
+                h2.masthead--subheader Complex structures
+    main
+        section.section-article.container-color--gray-light
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Person Cards
+                    hr.divider
+                    h3 Uses the flexbox n-up grid, and are responsive
+                    .row.small-up-2.large-up-4.group
+                        .column.media-object.card-person.stack-for-small
+                            .media-object-section
+                                img.avatar.avatar--large.circle(src='/img/people-profiles/prof-madeleine.jpg')
+                            .media-object-section.main-section.align-self-middle
+                                h4.person-name Lobelia Proudfoot
+                                p.person-title Dreams feel real while we're in them.
+                        .column.media-object.card-person.stack-for-small
+                            .media-object-section
+                                img.avatar.avatar--large.circle(src='/img/people-profiles/prof-mark.jpg')
+                            .media-object-section.main-section.align-self-middle
+                                h4.person-name Bran Buckwind III
+                                p.person-title I Can Stack.
+                        .column.media-object.card-person.stack-for-small
+                            .media-object-section
+                                img.avatar.avatar--large.circle(src='/img/people-profiles/prof-kgrieger.jpg')
+                            .media-object-section.main-section.align-self-middle
+                                h4.person-name Bruce Almighty
+                                p.person-title Dreams feel real while we're in them.
+                        .column.media-object.card-person.stack-for-small
+                            .media-object-section
+                                img.avatar.avatar--large.circle(src='/img/people-profiles/prof-tyler.jpg')
+                            .media-object-section.main-section.align-self-middle
+                                h4.person-name Bandobras "Bullroarer" Took
+                                p.person-title I Can Stack.
+                    .row
+                        .columns.small-12
+                            h3.section-article--header-group Wrap cards in a callout class for variations
+                    .row.small-up-1.medium-up-2
+                        .column
+                            .callout
+                                p.person-quote
+                                    | I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.
+                                .column.media-object.card-person.stack-for-small
+                                    .media-object-section
+                                        img.avatar.avatar--large.circle(src='./img/people-profiles/prof-madeleine.jpg')
+                                    .media-object-section.main-section.align-self-middle
+                                        h4.person-name Lobelia Proudfoot
+                                        p.person-title Dreams feel real while we're in them.
+                        .column
+                            .callout.callout--hover
+                                p.person-quote Shrink the browser width to see me stack. I do tricks for dog treats, but I'm not a dog.
+                                .media-object.card-person.stack-for-small
+                                    .media-object-section
+                                        img.avatar.avatar--large.circle(src='/img/people-profiles/prof-mark.jpg')
+                                    .media-object-section.main-section.align-self-middle
+                                        h4.person-name Bran Buckwind III
+                                        p.person-title I Can Stack.
+        section.section-article
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Generic Cards
+                    hr.divider
+                    h3 Uses the flexbox n-up grid, and are responsive
+            .row.small-up-1.medium-up-2.large-up-3.xlarge-up-4.align-stretch
+                .columns
+                    .card-basic
+                        header.card-header
+                            img.card-icon.icon-size--medium.svg-color--gray.inject-me(src='/img/svg/icon-large-data.svg')
+                            h3.card-header--title This is a simple card
+                        .card-body
+                            h4.card-body--title Card body title
+                            p The Catalyze iOS SDK was built to help developers working with Apple mobile products build HIPAA compliant applications using the Catalyze Backend as a Service...
+                        footer.card-footer
+                            button.button.button-hollow--secondary Learn more about this card
+                .columns
+                    .card-basic
+                        header.card-header
+                            img.card-icon.icon-size--medium.svg-color--gray.inject-me(src='/img/svg/icon-large-lightbulb-circle.svg')
+                            h3.card-header--title This is a simple card
+                        .card-body
+                            h4.card-body--title Card body title
+                            p The Catalyze iOS SDK was built to help developers working with Apple mobile products build HIPAA compliant applications using the Catalyze Backend as a Service...
+                        footer.card-footer
+                            button.button.button-hollow--secondary Learn more about this card
+                .columns
+                    .card-basic
+                        header.card-header
+                            img.card-icon.icon-size--medium.svg-color--gray.inject-me(src='/img/svg/icon-large-guide.svg')
+                            h3.card-header--title This is a simple card
+                        .card-body
+                            h4.card-body--title Card body title
+                            p The Catalyze iOS SDK was built to help developers working with Apple mobile products build HIPAA compliant applications using the Catalyze Backend as a Service...
+                        footer.card-footer
+                            button.button.button-hollow--secondary Learn more about this card
+                .columns
+                    .card-basic
+                        header.card-header
+                            img.card-icon.icon-size--medium.svg-color--gray.inject-me(src='/img/svg/icon-large-hands-circle.svg')
+                            h3.card-header--title This is a simple card
+                        .card-body
+                            h4.card-body--title Card body title
+                            p The Catalyze iOS SDK was built to help developers working with Apple mobile products build HIPAA compliant applications using the Catalyze Backend as a Service...
+                        footer.card-footer
+                            button.button.button-hollow--secondary Learn more about this card
+            hr.divider
+            .row
+                .columns.small-12.section-article--header-group
+                    h3 Card variations
+                    :marked
+                        These currently use the `.callout` model. There's a bit of overlap between cards and callouts; the callouts are more generic and have color classes.
+            .row.small-up-1.medium-up-2.large-up-3.align-stretch
+                .columns
+                    .card.card-info.container-color--gray.text-center
+                        h4.card-body--title This card is gray
+                        hr.divider-white.divider-short
+                        .flex-grow
+                            p The complexity of FHIR explained. Extinguish the mystery of healthcare's latest standard.
+                        footer.card-footer
+                            button.button.button-hollow--white.expanded Learn more about this topic
+                .columns
+                    .card.card-info.container-color--blue.text-center
+                        h4.card-body--title This card is the primary brand color
+                        hr.divider-white.divider-short
+                        .flex-grow
+                            p The Catalyze iOS SDK was built to help developers working with Apple mobile products build HIPAA compliant applications.
+                        footer.card-footer
+                            button.button.button-hollow--white.expanded Learn more about this topic
+                .columns
+                    .card.card-info.container-color--red.text-center
+                        h4.card-body--title This card is red
+                        hr.divider-white.divider-short
+                        .flex-grow
+                            p I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.
+                        footer.card-footer
+                            button.button.button-hollow--white.expanded Learn more about this topic

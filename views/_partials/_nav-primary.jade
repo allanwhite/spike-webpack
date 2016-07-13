@@ -1,0 +1,24 @@
+nav
+    #site-menu.top-bar.row
+        .top-bar-left
+            ul.dropdown.menu(data-dropdown-menu='')
+                li.menu-text
+                    a.menu-logo(href='/', title='main')
+                        img.logo--nav(src='/img/svg/logo-catalyze-white.svg', alt='site logo')
+                li
+                    a.nav-link--light(href='/guide/typography') Typography
+                li
+                    a.nav-link--light(href='/guide/components') Components
+        .top-bar-right
+            //- search box
+            //- .menu.hide-for-small-only
+            //-     .input-group.align-right
+            //-         input.input-group-field(type='search', placeholder='Search')
+            //-         .input-group-button
+            //-             input.button(type='submit', value='Search')
+            //-         button.button.button-hollow--white Call today
+            //- .menu.show-for-small-only
+            //-     button.button.button-hollow--white.expanded Call today
+            .menu
+                button.button.button-hollow--white.hide-for-small-only Call today
+                button.button.button-hollow--white.expanded.show-for-small-only Call today

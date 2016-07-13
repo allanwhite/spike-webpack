@@ -1,0 +1,41 @@
+//- Mixins
+//-    =========================
+//-    This file contains all mixins used across the site. You can add your own
+//-    custom mixins here. To use them, make sure _mixins is included at the top 
+//-    of the file.
+//-    =========================
+
+//- Include _functions.jade so you only have to include _mixins everywhere else
+//- include _functions
+
+//- Get any customer logo as an object from master list, eg. +customerLogos(2)
+//- mixin customerLogos(id, w)
+//-     // get object from /public/_data.json - see https://harpjs.com/docs/development/metadataz
+//-     - var thelogo = public._data.customerLogos[id]
+//-     a(href='http://'+thelogo.url, title='visit the ' + thelogo.name + ' website')
+//-         //-submit customerLogos(12, true) to get a white logo
+//-         if w == true
+//-             - var ext = '-w.png'
+//-         else
+//-             - var ext = '.png'
+//-         img.logo(src='https://catalyze.io/assets/img/customer-logos/' + thelogo.file + ext, alt=thelogo.name)
+//-         block
+
+//- various customer lists. Could the name of the object be passed into the mixin?
+//- mixin customerList()
+//-     for theCustomer, index in public._data.customerLogos
+//-         a.customer(href='http://'+theCustomer.url, title='visit the ' + theCustomer.name + ' website')
+//-             img.logo(src='https://catalyze.io/assets/img/customer-logos/' + theCustomer.file + '.png', alt=theCustomer.name)
+//-             block
+
+//- mixin customersHT()
+//-     each theCustomer, id in public._data.customersHT
+//-         a.customer(href='http://'+theCustomer.url, title='visit the ' + theCustomer.name + ' website')
+//-             img.logo(src='https://catalyze.io/assets/img/customer-logos/' + theCustomer.file + '.png', alt=theCustomer.name)
+//-             block
+//- 
+//- mixin customersEHR()
+//-     each theCustomer, id in public._data.customersEHR
+//-         a.customer(href='http://'+theCustomer.url, title='visit the ' + theCustomer.name + ' website')
+//-             img.logo(src='https://catalyze.io/assets/img/customer-logos/' + theCustomer.file + '.png', alt=theCustomer.name)
+//-             block

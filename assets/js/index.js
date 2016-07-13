@@ -1,1 +1,1 @@
-console.log('you can use ES6 here : )')
+console.log('ES6 ok')

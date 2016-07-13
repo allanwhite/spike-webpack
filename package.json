@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "ava": "0.15.x",
+    "jstransformer-marked": "^1.0.1",
     "node-sass": "^3.8.0",
     "rimraf": "2.5.x",
     "sass-loader": "^4.0.0",
