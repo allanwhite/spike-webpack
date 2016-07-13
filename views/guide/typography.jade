@@ -1,6 +1,10 @@
 extends /layout
 include /_includes/_mixins
 
+block prepend title
+    - var pageTitle = ' | Basic Typography'
+
+//- This passes a custom stylesheet into the layout
 block prepend stylesheets
     link(rel='stylesheet', href='/css/customview.css')
 
