@@ -1,14 +1,17 @@
+include /_includes/_data
 nav
     #site-menu.top-bar.row
         .top-bar-left
             ul.dropdown.menu(data-dropdown-menu='')
+                
+                        
                 li.menu-text
                     a.menu-logo(href='/', title='main')
                         img.logo--nav(src='/img/svg/logo-catalyze-white.svg', alt='site logo')
-                li
-                    a.nav-link--light(href='/guide/typography') Typography
-                li
-                    a.nav-link--light(href='/guide/components') Components
+                each page, n in pages
+                    li
+                        a.nav-link--light(href='page.url', title=page.title) #{page.navTitle}
+
         .top-bar-right
             //- search box
             //- .menu.hide-for-small-only

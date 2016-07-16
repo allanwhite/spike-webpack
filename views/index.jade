@@ -1,25 +1,28 @@
 extends /layout
+//- - var pages = [{title: 'Content Blocks & Structures', navTitle: 'Blocks', url: 'guide/blocks', desc: 'These larger-level structures work well from mobile to desktop extra-wide, and have many options like padding, image backgrounds, and color classes.'}, {title: 'Typography', navTitle: 'Type', url: 'guide/typography', desc: 'Basic typography styles and formatting.'}, {title: 'Components', navTitle: 'Components', url: 'guide/components', desc: 'Cards and other elements.'}]
 
 block prepend title
     - var pageTitle = ' | Larger Structures'
 
 block content
+    include /_includes/_data
     include /_partials/_nav-mobile
-    main.masthead.container-image-fill(data-interchange='[./img/data-distortion-textures-@1x.png, small], [img/data-distortion-textures-@2x.png, large]')
+    main.full-width.full-height.align-middle.masthead.container-image-fill(data-interchange='[./img/data-distortion-textures-@1x.png, small], [img/data-distortion-textures-@2x.png, large]')
         include /_partials/_nav-primary
-        .row
-            .small-12.columns
-                h1.header-masthead Style Guide & Examples
-                h2.masthead--subheader A subtitle keeps things concise.
-                p.lead Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
-        .row.small-up-1.medium-up-2.large-up-3.xlarge-up-4
-            - var pages = [{title: 'Content Blocks & Structures', url: 'guide/blocks', desc: 'These larger-level structures work well from mobile to desktop extra-wide, and have many options like padding, image backgrounds, and color classes.'}, {title: 'Typography', url: 'guide/typography', desc: 'Basic typography styles and formatting.'}, {title: 'Components', url: 'guide/components', desc: 'Cards and other elements.'}]
-            each page, n in pages
-                .column
-                    .callout
-                        a(href='/' + page.url, title='Explore ' + page.title)
-                            h3= page.title
-                        p= page.desc
+        .row.align-center
+            .columns.small-12.medium-8
+                .row
+                    .column
+                        h1.header-masthead Style Guide & Examples
+                        h2.masthead--subheader Built with Spike & Webpack. Templates with Jade & markdown.
+                        p.lead Below are a few demo pages from the Echo II Guide project.
+                .row.small-up-1.medium-up-2.large-up-3
+                    each page, n in pages
+                        .column
+                            .callout
+                                a(href='/' + page.url, title='Explore ' + page.title)
+                                    h3= page.title
+                                p= page.desc
 
             //- .small-12.medium-6.columns
                 //- .callout.callout-dark

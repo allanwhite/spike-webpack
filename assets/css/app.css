@@ -4409,3 +4409,7 @@ hr.divider-short {
 .typo-styles--desc {
   font-size: 90%;
   opacity: 0.6; }
+/* emergency styles - need to add to sass later */
+.full-height {
+  height: 100vh;
+}
