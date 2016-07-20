@@ -10,7 +10,7 @@ nav
                         img.logo--nav(src='/img/svg/logo-catalyze-white.svg', alt='site logo')
                 each page, n in pages
                     li
-                        a.nav-link--light(href='page.url', title=page.title) #{page.navTitle}
+                        a.nav-link--light(href=page.url, title=page.title) #{page.navTitle}
 
         .top-bar-right
             //- search box
