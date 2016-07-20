@@ -6,7 +6,7 @@ block prepend title
 
 block content
     include /_partials/_nav-mobile
-    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [img/data-distortion-textures-@2x.png, large]')
+    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
         include /_partials/_nav-primary
 
         .row
@@ -120,7 +120,7 @@ block content
                 .columns.small-12.section-article--header-group
                     h3 Card variations
                     :marked
-                        These currently use the `.callout` model. There's a bit of overlap between cards and callouts; the callouts are more generic and have color classes.
+                        These currently use the `.callout` model. There's a bit of overlap between cards and callouts; the callouts are more generic and have color classes. There's also some [more examples in development at this Codepen](http://codepen.io/allanwhite/pen/wWgwaz), such as cards with image-background headers.
             .row.small-up-1.medium-up-2.large-up-3.align-stretch
                 .columns
                     .card.card-info.container-color--gray.text-center
