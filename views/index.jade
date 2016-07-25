@@ -14,14 +14,14 @@ block content
                 .row
                     .column
                         h1.header-masthead Style Guide & Examples
-                        h2.masthead--subheader Built with Spike & Webpack. Templates with Jade & markdown.
+                        h2.masthead--subheader Built with #[a(href="https://spike.readme.io/docs/getting-started")Spike] & Webpack. Templates with #[a(href="http://jade-lang.com/")Jade] & Markdown.
                         p.lead Below are a few demo pages from the Echo II Guide project.
                 .row.small-up-1.medium-up-2.large-up-3
                     each page, n in pages
                         .column
                             .callout
-                                a(href='/' + page.url, title='Explore ' + page.title)
-                                    h3= page.title
+                                a(href=page.url, title='Explore ' + page.title)
+                                    h4= page.title
                                 p= page.desc
 
             //- .small-12.medium-6.columns
