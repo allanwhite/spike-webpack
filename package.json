@@ -12,7 +12,7 @@
     "babel-preset-stage-2": "6.x",
     "cssnano": "3.x",
     "image-webpack-loader": "1.x",
-    "lost": "6.x",
+    "lost": "7.x",
     "postcss-cssnext": "2.6.x",
     "postcss-import": "8.x",
     "posthtml-jade": "0.8.x",
