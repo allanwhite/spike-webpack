@@ -1,5 +1,4 @@
 extends /layout
-include /_includes/_data
 include /_includes/_mixins
 
 block prepend title
@@ -19,10 +18,61 @@ block content
                 +pageHeader(3)
     main
         section#content-top.section-article
+            //- === tabs component needs formatting improvements. Sample code: 
+            //- ul#card-options.tabs(data-tabs)
+            //-     li.tabs-title.is-active
+            //-         a(href='#panel1', aria-selected='true') Tab one
+            //-     li.tabs-title
+            //-         a(href='#panel2') Tab 2
+            //-     li.tabs-title
+            //-         a(href='#panel3') Tab 3
+            //- 
+            //- .tabs-content(data-tabs-content='card-options')
+            //-     #panel1.tabs-panel.is-active
+            //-     #panel2.tabs-panel
+            //-     #panel3.tabs-panel
             .row
                 .columns.small-12.section-article--header-group
-                    h1.section-article--header Person Cards
+                    h1.section-article--header N-up content blocks
                     hr.divider
-                    h3 Uses the flexbox n-up grid, and are responsive
+                    h3 Uses the flexbox n-up responsive grid
+            .row.small-up-1.medium-up-2.large-up-3
+                .column
+                    h3 Scripts
+                    p.lead Pre-configured bundles of EHR integrations that solve specific workflow requirements.
+                    p Scripts are custom-built workflows for digital health use cases. You select a Script such as enrolling patients in your application for a care management solution, collecting patient data for a clinical research platform, writing orders for a telemedicine services, or scheduling patients within patient portals. We do the rest.
+                    button.button.button-hollow View example Scripts
+                .column
+                    h3 Connectors
+                    p.lead Streamline VPN connectivity to secure connections with any partner. Connectors scale as you scale.
+                    p EHR integration is only part of your challenge. You also need to create and manage secure connections, typically via VPN, to health systems. This challenge grows exponentially at scale. Redpoint Connectors automate the creation and management of secure connections, eliminating that burden for you. It's magic your salespeople will love.
+                    button.button.button-hollow Learn more
+                .column
+                    h3 Bearings
+                    p.lead Pre-configured bundles of EHR integrations that solve specific workflow requirements.
+                    p Scripts are custom-built workflows for digital health use cases. You select a Script such as enrolling patients in your application for a care management solution, collecting patient data for a clinical research platform, writing orders for a telemedicine services, or scheduling patients within patient portals. We do the rest.
+                    button.button.button-hollow Learn more
+            
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Page Lists
+                    hr.divider
+                    h3 Thumbnail image on the side
+                    //- - var n = 0
+                    //- ul
+                    //-     while n < 4
+                    //-         li= n++
+                    
+            .row.item-list.group
+                .columns.medium-3.small-2
+                    img(src="https://d13yacurqjgara.cloudfront.net/users/125948/screenshots/2857497/finding-ways-icon_1x.png")
+                .columns.medium-9.small-10
+                    p Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+            .row.item-list.group
+                .columns.medium-3.small-2
+                    img(src="https://d13yacurqjgara.cloudfront.net/users/450804/screenshots/2857249/desktop_hd_1x.png")
+                .columns.medium-9.small-10
+                    p Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
 block footer
     include /_partials/_footer
