@@ -1,3 +1,4 @@
+include _data
 //- Mixins
 //-    =========================
 //-    This file contains all mixins used across the site. You can add your own
@@ -6,7 +7,12 @@
 //-    =========================
 
 //- Include _functions.jade so you only have to include _mixins everywhere else
-//- include _functions
+include _functions
+
+//- get the page title & description from the global nav data object
+mixin pageHeader(id)
+    h1.header-masthead= pages[id].title
+    h2.masthead--subheader= pages[id].desc
 
 //- Get any customer logo as an object from master list, eg. +customerLogos(2)
 //- mixin customerLogos(id, w)

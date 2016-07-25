@@ -14,10 +14,7 @@ block content
         include /_partials/_nav-primary
         .row
             .small-12.columns
-                h1.header-masthead Typography and Long-Form Content
-        .row
-            .small-12.medium-6.columns
-                h2.masthead--subheader Most of the stock elements on one page.
+                +pageHeader(1)
     main
         section#content-top.section-article
             .row
@@ -100,13 +97,7 @@ block content
                                 * Learn the architectural advantage of FHIR versus other data exchange standards
                                 * Understand Grahame's thoughts around open-source and its importance
                                 * Discover the unrealized dream for FHIR and why Grahame wants to eventually come back to it
-                            //- h4 More key insights, in no particular order
-                            //- ul
-                            //-     li Discover what potential healthcare requirement would force everyone to re-engineer their interfaces
-                            //-     li Learn the architectural advantage of FHIR versus other data exchange standards
-                            //-     li Understand Grahame's thoughts around open-source and its importance
-                            //-     li Discover the unrealized dream for FHIR and why Grahame wants to eventually come back to it
-        section
+        section.section-article
             .row
                 .columns.small-12.medium-12.large-8.large-offset-4
                     hr.divider
@@ -118,7 +109,7 @@ block content
         section.container-pad--medium.container-color--blue.full-width.group.text-centered
             p.quote-full
                 | Healthcare entities need some benchmark metrics to assess the true value of an increased commitment to outsourcing its services at both holistic and strategic levels.
-        section
+        section.section-article
             .row
                 .columns.small-12.medium-12.large-8.large-offset-4
                     p With increasing service volumes, costs per service unit will lessen, meaning outsourcing services can preserve resources through scaling economies. Independent hospitals may be unable to meet the expense levels achieved by external providers when combining their service volumes to various service units. However, outsourcing can only reduce cost when three requisites are met – 1. there are economies of scale, 2. the economies transcend corporate boundaries, and 3. the savings are sufficient to generate profit even after paying off all stakeholders.
@@ -128,16 +119,14 @@ block content
                     p The modern need to outsource is rooted in the generational desire to be proactive. Hospitals are incessantly on the brink of slighting margins, increasing patient expectations and minimal federal support. However, hospitals now understand the costs of reactive, short-term, tactical solutions to immediate issues. The key to survival lies in leveraging organizational attributes while enacting continuous incremental improvements in effectiveness and efficiency – more often than not by using third-party vendors.
                     p With that said, healthcare entities need some benchmark metrics to assess the true value of an increased commitment to outsourcing its services at both holistic and strategic levels.
                     :marked
-                        -   **Employee Gratification**: Does internal staff experience increased satisfaction due to outsourced functions and being capable to invest more of time in strategic and innovative initiatives?
-                        -   **Consumer Satisfaction**: Is the outside provider delivering equal or increased service to consumers in contrast to in-house services? Is staff more attentive to core functions due to outsourcing?
-                        -   **Economic Value Contribution**: Does the external vendor deliver more efficiently to achieve cost savings? Is the entity able to evade additional costs by outsourcing?
-                        -   **Competitive Advantages**: Is there a competitive edge with outsourcing? Are prospective and existing clients increasing service engagements because of outsourced services?
-                        -   **Allocation of Resources**: Is the service provider reliably delivering the required quality and scope through dedicated resources: labor, technology, knowledge, and assets? Is the current allocation of resources appropriate for the agreed upon objective? Is the resource division mutually satisfactory?
-                    p In sum, the advantages of outsourcing are that hospitals can assume access to asset improvement funds, widespread risk sharing, increased cost avoidance and savings, considerable resource access, enhanced employee retention, and raised patient satisfaction.  Long-term strategic, transformative partnerships with vendors may introduce market opportunities beyond either party’s core competence. A few long-term, strategic service vendors may be a more fruitful arrangement in comparison to a multitude of narrow-focused, short-term, one-off relationships.
-                    p Questions? Reach out to us 
-                        a(href='mailto:hello@catalyze.io') directly
-                        | , 
-                        a(href='https://twitter.com/catalyzeio') tweet us
-                        | , or provide us your contact information to the right. We’ll solve your problem so you can focus on your solution.
+                        - **Employee Gratification**: Does internal staff experience increased satisfaction due to outsourced functions and being capable to invest more of time in strategic and innovative initiatives?
+                        - **Consumer Satisfaction**: Is the outside provider delivering equal or increased service to consumers in contrast to in-house services? Is staff more attentive to core functions due to outsourcing?
+                        - **Economic Value Contribution**: Does the external vendor deliver more efficiently to achieve cost savings? Is the entity able to evade additional costs by outsourcing?
+                        - **Competitive Advantages**: Is there a competitive edge with outsourcing? Are prospective and existing clients increasing service engagements because of outsourced services?
+                        - **Allocation of Resources**: Is the service provider reliably delivering the required quality and scope through dedicated resources: labor, technology, knowledge, and assets? Is the current allocation of resources appropriate for the agreed upon objective? Is the resource division mutually satisfactory?
+                        
+                        In sum, the advantages of outsourcing are that hospitals can assume access to asset improvement funds, widespread risk sharing, increased cost avoidance and savings, considerable resource access, enhanced employee retention, and raised patient satisfaction.  Long-term strategic, transformative partnerships with vendors may introduce market opportunities beyond either party’s core competence. A few long-term, strategic service vendors may be a more fruitful arrangement in comparison to a multitude of narrow-focused, short-term, one-off relationships.
+                        
+                        Questions? Reach out to us [directly](mailto:hello@catalyze.io), send us a [tweet](https://twitter.com/catalyzeio), or provide us your contact information to the right. We’ll solve your problem so you can focus on your solution.
 block footer
     include /_partials/_footer

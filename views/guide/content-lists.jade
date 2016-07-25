@@ -1,0 +1,28 @@
+extends /layout
+include /_includes/_data
+include /_includes/_mixins
+
+block prepend title
+    - var pageTitle = ' | Basic Typography'
+
+//- This passes a custom stylesheet into the layout
+block prepend stylesheets
+    link(rel='stylesheet', href='/css/customview.css')
+
+block content
+    include /_partials/_nav-mobile
+    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
+        include /_partials/_nav-primary
+        .row
+            .small-12.columns
+                //- get the page title & description from the global nav data object; id is position in object
+                +pageHeader(3)
+    main
+        section#content-top.section-article
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Person Cards
+                    hr.divider
+                    h3 Uses the flexbox n-up grid, and are responsive
+block footer
+    include /_partials/_footer

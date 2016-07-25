@@ -10,11 +10,12 @@ block content
         include /_partials/_nav-primary
         .row
             .small-12.columns
-                h1.header-masthead Style Guide & Examples
+                h1.header-masthead= pages[0].title
+                
         .row
             .small-12.medium-6.columns
-                h2.masthead--subheader A subtitle keeps things concise.
-                p.lead Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content.
+                h2.masthead--subheader Primary Containers
+                p.lead= pages[0].desc
             .small-12.medium-6.columns
                 .callout.callout-dark
                     h3.callout-dark--header A callout panel, with a header
