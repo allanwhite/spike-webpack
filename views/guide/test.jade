@@ -1,0 +1,17 @@
+extends /layout
+include /_includes/_mixins
+
+block prepend title
+    - var pageTitle = ' | Testing Something'
+
+block content
+    include /_partials/_nav-mobile
+    header
+        include /_partials/_nav-primary
+        .row
+            .small-12.columns
+                +pageHeader(1)
+        .row
+            .small-12-columns
+                p hello there
+    main
