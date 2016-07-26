@@ -1,0 +1,46 @@
+extends /layout
+include /_includes/_mixins
+
+block prepend title
+    - var pageTitle = ' | Forms'
+
+//- This passes a custom stylesheet into the layout
+//- block prepend stylesheets
+//-     link(rel='stylesheet', href='/css/views/misc.css')
+
+block content
+    include /_partials/_nav-mobile
+    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
+        include /_partials/_nav-primary
+        .row
+            .small-12.columns
+                //- get the page title & description from the global nav data object; id is position in object
+                +pageHeader(4)
+    main
+        section#content-top.section-article
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Form Basics
+                    p.lead Creating a form in Foundation is designed to be easy but extremely flexible. Forms are built with a combination of standard form elements, as well as grid rows and columns.
+                    hr.divider
+                .columns.small-12
+                    :marked
+                        #### Text Inputs
+                    
+                        These input types create a text field: `text`, `date`, `datetime`, `datetime-local`, `email`, `month`, `number`, `password`, `search`, `tel`, `time`, `url`, and `week`.
+                    form
+                        .row
+                            .medium-6.columns
+                                label Input Label
+                                    input(type='text', placeholder='.medium-6.columns')
+                            .medium-6.columns
+                                label Input Label
+                                    input(type='text', placeholder='.medium-6.columns')
+                .columns.small-12
+                    h4 Number Inputs
+                    p
+                        | In most desktop browsers, #[code input type="number"] elements will have up/down controls inside them, which increment and decrement the number inside the field. These are called #[strong spin buttons]. You can disable them by setting the #[code $input-number-spinners] Sass variable to #[code false].
+                    label How many puppies?
+                        input(type='number', value='100', size='10')
+block footer
+    include /_partials/_footer

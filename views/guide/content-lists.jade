@@ -2,7 +2,7 @@ extends /layout
 include /_includes/_mixins
 
 block prepend title
-    - var pageTitle = ' | Basic Typography'
+    - var pageTitle = ' | Content Lists'
 
 //- This passes a custom stylesheet into the layout
 block prepend stylesheets
@@ -59,21 +59,21 @@ block content
                     p.lead These lists are simple responsive patterns for listing longer articles. The thumbnail appears on the left, and scales with the viewport. On mobile, the thumbnail is still present but very small; open to it disappearing or being formatted differently.
                     hr.divider
             .row.item-list.group
-                .columns.medium-4.small-3.large-2
+                .columns.medium-4.small-3.large-2.item-list--image
                     a(href="https://dribbble.com/shots/782399-Blueprint-Wireframe" target="_blank")
                         img(src="https://d13yacurqjgara.cloudfront.net/users/24203/screenshots/782399/blueprint_wireframe2x_1x.jpg")
                 .columns.medium-8.small-9.large-10
                     h3.section-article--block-header= loremBlocks[0].title
                     p= loremBlocks[0].body
             .row.item-list.group
-                .columns.medium-4.small-3.large-2
+                .columns.medium-4.small-3.large-2.item-list--image
                     a(href="https://dribbble.com/shots/2258772-NY-Pizza" target="_blank")
                         img(src="https://d13yacurqjgara.cloudfront.net/users/330915/screenshots/2258772/4_ny_b.gif")
                 .columns.medium-8.small-9.large-10
                     h3.section-article--block-header= loremBlocks[1].title
                     p= loremBlocks[1].body
             .row.item-list.group
-                .columns.medium-4.small-3.large-2
+                .columns.medium-4.small-3.large-2.item-list--image
                     a(href="https://dribbble.com/shots/2168270-Time-Management-App" target="_blank")
                         img(src="https://d13yacurqjgara.cloudfront.net/users/271036/screenshots/2168270/shot800_600_1x.png")
                 .columns.medium-8.small-9.large-10
@@ -87,7 +87,7 @@ block content
             .row.collapse.full-width.small-up-1.medium-up-2.xlarge-up-3
                 .column.section-article--block
                     .row.item-list.item-list--grid
-                        .columns.medium-4.small-3
+                        .columns.medium-4.small-3.item-list--image
                             a(href="https://dribbble.com/shots/782399-Blueprint-Wireframe" target="_blank")
                                 img(src="https://d13yacurqjgara.cloudfront.net/users/24203/screenshots/782399/blueprint_wireframe2x_1x.jpg")
                         .columns.medium-8.small-9
@@ -95,7 +95,7 @@ block content
                             p= lorems[0]
                 .column.section-article--block
                     .row.item-list.item-list--grid
-                        .columns.medium-4.small-3
+                        .columns.medium-4.small-3.item-list--image
                             a(href="https://dribbble.com/shots/2258772-NY-Pizza" target="_blank")
                                 img(src="https://d13yacurqjgara.cloudfront.net/users/330915/screenshots/2258772/4_ny_b.gif")
                         .columns.medium-8.small-9
@@ -103,7 +103,7 @@ block content
                             p= lorems[1]
                 .column.section-article--block
                     .row.item-list.item-list--grid
-                        .columns.medium-4.small-3
+                        .columns.medium-4.small-3.item-list--image
                             a(href="https://dribbble.com/shots/2168270-Time-Management-App" target="_blank")
                                 img(src="https://d13yacurqjgara.cloudfront.net/users/271036/screenshots/2168270/shot800_600_1x.png")
                         .columns.medium-8.small-9
@@ -111,15 +111,15 @@ block content
                             p= lorems[2]
                 .column.section-article--block
                     .row.item-list.item-list--grid
-                        .columns.medium-4.small-3
-                            a(href="https://dribbble.com/shots/782399-Blueprint-Wireframe" target="_blank")
-                                img(src="https://d13yacurqjgara.cloudfront.net/users/24203/screenshots/782399/blueprint_wireframe2x_1x.jpg")
+                        .columns.medium-4.small-3.item-list--image
+                            a(href="https://dribbble.com/shots/992731-Wireframing-Close" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/14268/screenshots/992731/close_1x.png")
                         .columns.medium-8.small-9
                             h3.section-article--block-header= loremBlocks[3].title
                             p= lorems[3]
                 .column.section-article--block
                     .row.item-list.item-list--grid
-                        .columns.medium-4.small-3
+                        .columns.medium-4.small-3.item-list--image
                             a(href="https://dribbble.com/shots/2168270-Time-Management-App" target="_blank")
                                 img(src="https://d13yacurqjgara.cloudfront.net/users/271036/screenshots/2168270/shot800_600_1x.png")
                         .columns.medium-8.small-9
@@ -127,7 +127,7 @@ block content
                             p= lorems[4]
                 .column.section-article--block
                     .row.item-list.item-list--grid
-                        .columns.medium-4.small-3
+                        .columns.medium-4.small-3.item-list--image
                             a(href="https://dribbble.com/shots/1592816-Probability-theory" target="_blank")
                                 img(src="https://d13yacurqjgara.cloudfront.net/users/13307/screenshots/1592816/distribution_1x.jpg")
                         .columns.medium-8.small-9

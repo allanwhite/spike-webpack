@@ -1,0 +1,36 @@
+extends /layout
+include /_includes/_mixins
+
+block prepend title
+    - var pageTitle = ' | Miscellaneous'
+
+//- This passes a custom stylesheet into the layout
+block prepend stylesheets
+    link(rel='stylesheet', href='/css/views/misc.css')
+
+block content
+    include /_partials/_nav-mobile
+    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
+        include /_partials/_nav-primary
+        .row
+            .small-12.columns
+                //- get the page title & description from the global nav data object; id is position in object
+                +pageHeader(4)
+    main
+        section#content-top.section-article
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Labels
+                    h3 Good for tags or info
+                    .group
+                        span.label Basic Default Label 
+                        span.label.success Success 
+                        span.label.secondary Secondary 
+                        span.label.alert Alert
+                    .group
+                        p(aria-describedby='emailLabel1 emailLabel2') For improved #[code a11y], labels can be associated with an element that they describe.
+                        span#emailLabel1.label High Priority
+                        span#emailLabel2.label Unread
+            
+block footer
+    include /_partials/_footer

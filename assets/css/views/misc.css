@@ -1,5 +1,4 @@
 /* CSS files in the /views directory are for per-view overrides or custom CSS. For now, this is just until SCSS parsing is enabled. */
-.item-list--grid {
-    /*padding-right: 0.5rem;*/
-    padding-right: 3vw;
+.label {
+    margin-right: 3px;
 }
