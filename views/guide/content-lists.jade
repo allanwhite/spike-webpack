@@ -6,7 +6,7 @@ block prepend title
 
 //- This passes a custom stylesheet into the layout
 block prepend stylesheets
-    link(rel='stylesheet', href='/css/customview.css')
+    link(rel='stylesheet', href='/css/views/content-lists.css')
 
 block content
     include /_partials/_nav-mobile
@@ -34,48 +34,104 @@ block content
             .row
                 .columns.small-12.section-article--header-group
                     h1.section-article--header N-up content blocks
-                    hr.divider
                     h3 Uses the flexbox n-up responsive grid
+                    hr.divider
             .row.small-up-1.medium-up-2.large-up-3
                 .column
                     h3 Scripts
-                    p.lead Pre-configured bundles of EHR integrations that solve specific workflow requirements.
+                    h4.section-article--block-header Pre-configured bundles of EHR integrations that solve specific workflow requirements.
                     p Scripts are custom-built workflows for digital health use cases. You select a Script such as enrolling patients in your application for a care management solution, collecting patient data for a clinical research platform, writing orders for a telemedicine services, or scheduling patients within patient portals. We do the rest.
                     button.button.button-hollow View example Scripts
                 .column
                     h3 Connectors
-                    p.lead Streamline VPN connectivity to secure connections with any partner. Connectors scale as you scale.
+                    h4.section-article--block-header Streamline VPN connectivity to secure connections with any partner. Connectors scale as you scale.
                     p EHR integration is only part of your challenge. You also need to create and manage secure connections, typically via VPN, to health systems. This challenge grows exponentially at scale. Redpoint Connectors automate the creation and management of secure connections, eliminating that burden for you. It's magic your salespeople will love.
                     button.button.button-hollow Learn more
                 .column
                     h3 Bearings
-                    p.lead Pre-configured bundles of EHR integrations that solve specific workflow requirements.
+                    h4.section-article--block-header Pre-configured bundles of EHR integrations that solve specific workflow requirements.
                     p Scripts are custom-built workflows for digital health use cases. You select a Script such as enrolling patients in your application for a care management solution, collecting patient data for a clinical research platform, writing orders for a telemedicine services, or scheduling patients within patient portals. We do the rest.
                     button.button.button-hollow Learn more
         section#lists-entries.section-article
             .row
                 .columns.small-12.section-article--header-group
-                    h1.section-article--header Page Lists
+                    h1.section-article--header Entry Thumbnail Lists
+                    p.lead These lists are simple responsive patterns for listing longer articles. The thumbnail appears on the left, and scales with the viewport. On mobile, the thumbnail is still present but very small; open to it disappearing or being formatted differently.
                     hr.divider
-                    h3 Thumbnail image on the side
             .row.item-list.group
                 .columns.medium-4.small-3.large-2
-                    img(src="https://d13yacurqjgara.cloudfront.net/users/125948/screenshots/2857497/finding-ways-icon_1x.png")
+                    a(href="https://dribbble.com/shots/782399-Blueprint-Wireframe" target="_blank")
+                        img(src="https://d13yacurqjgara.cloudfront.net/users/24203/screenshots/782399/blueprint_wireframe2x_1x.jpg")
                 .columns.medium-8.small-9.large-10
                     h3.section-article--block-header= loremBlocks[0].title
                     p= loremBlocks[0].body
             .row.item-list.group
                 .columns.medium-4.small-3.large-2
-                    img(src="https://d13yacurqjgara.cloudfront.net/users/450804/screenshots/2857249/desktop_hd_1x.png")
+                    a(href="https://dribbble.com/shots/2258772-NY-Pizza" target="_blank")
+                        img(src="https://d13yacurqjgara.cloudfront.net/users/330915/screenshots/2258772/4_ny_b.gif")
                 .columns.medium-8.small-9.large-10
                     h3.section-article--block-header= loremBlocks[1].title
                     p= loremBlocks[1].body
             .row.item-list.group
                 .columns.medium-4.small-3.large-2
-                    img(src="https://d13yacurqjgara.cloudfront.net/users/895215/screenshots/2858162/stats_preview_1x.png")
+                    a(href="https://dribbble.com/shots/2168270-Time-Management-App" target="_blank")
+                        img(src="https://d13yacurqjgara.cloudfront.net/users/271036/screenshots/2168270/shot800_600_1x.png")
                 .columns.medium-8.small-9.large-10
                     h3.section-article--block-header= loremBlocks[2].title
                     p= loremBlocks[2].body
-
+        section.section-article.full-width.container-color--gray-light
+            .row
+                .columns.small-12.text-center.section-article--header-group
+                    h2.section-article--header Varation with n-up grid
+                    p.lead For larger selections of entry lists
+            .row.collapse.full-width.small-up-1.medium-up-2.xlarge-up-3
+                .column.section-article--block
+                    .row.item-list.item-list--grid
+                        .columns.medium-4.small-3
+                            a(href="https://dribbble.com/shots/782399-Blueprint-Wireframe" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/24203/screenshots/782399/blueprint_wireframe2x_1x.jpg")
+                        .columns.medium-8.small-9
+                            h3.section-article--block-header= loremBlocks[0].title
+                            p= lorems[0]
+                .column.section-article--block
+                    .row.item-list.item-list--grid
+                        .columns.medium-4.small-3
+                            a(href="https://dribbble.com/shots/2258772-NY-Pizza" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/330915/screenshots/2258772/4_ny_b.gif")
+                        .columns.medium-8.small-9
+                            h3.section-article--block-header= loremBlocks[1].title
+                            p= lorems[1]
+                .column.section-article--block
+                    .row.item-list.item-list--grid
+                        .columns.medium-4.small-3
+                            a(href="https://dribbble.com/shots/2168270-Time-Management-App" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/271036/screenshots/2168270/shot800_600_1x.png")
+                        .columns.medium-8.small-9
+                            h3.section-article--block-header= loremBlocks[2].title
+                            p= lorems[2]
+                .column.section-article--block
+                    .row.item-list.item-list--grid
+                        .columns.medium-4.small-3
+                            a(href="https://dribbble.com/shots/782399-Blueprint-Wireframe" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/24203/screenshots/782399/blueprint_wireframe2x_1x.jpg")
+                        .columns.medium-8.small-9
+                            h3.section-article--block-header= loremBlocks[3].title
+                            p= lorems[3]
+                .column.section-article--block
+                    .row.item-list.item-list--grid
+                        .columns.medium-4.small-3
+                            a(href="https://dribbble.com/shots/2168270-Time-Management-App" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/271036/screenshots/2168270/shot800_600_1x.png")
+                        .columns.medium-8.small-9
+                            h3.section-article--block-header= loremBlocks[4].title
+                            p= lorems[4]
+                .column.section-article--block
+                    .row.item-list.item-list--grid
+                        .columns.medium-4.small-3
+                            a(href="https://dribbble.com/shots/1592816-Probability-theory" target="_blank")
+                                img(src="https://d13yacurqjgara.cloudfront.net/users/13307/screenshots/1592816/distribution_1x.jpg")
+                        .columns.medium-8.small-9
+                            h3.section-article--block-header= loremBlocks[1].title
+                            p= lorems[1]
 block footer
     include /_partials/_footer
