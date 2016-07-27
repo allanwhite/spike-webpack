@@ -1,0 +1,27 @@
+/* CSS files in the /views directory are for per-view overrides or custom CSS. For now, this is just until SCSS parsing is enabled. */
+
+.typo-styles dt {
+    display: block;
+    float: left;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.typo-styles dd {
+    display: block;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.typo-styles--demo {
+    margin-bottom: 5px;
+}
+.typo-styles--desc {
+    font-size: 90%;
+    opacity: 0.6;
+}

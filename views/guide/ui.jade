@@ -1,0 +1,103 @@
+extends /layout
+include /_includes/_mixins
+
+block prepend title
+    - var pageTitle = ' | UI Elements'
+
+//- This passes a custom stylesheet into the layout
+block prepend stylesheets
+    link(rel='stylesheet', href='/css/views/ui.css')
+
+block content
+    include /_partials/_nav-mobile
+    header.masthead.container-image-fill(data-interchange='[/img/data-distortion-textures-@1x.png, small], [/img/data-distortion-textures-@2x.png, large]')
+        include /_partials/_nav-primary
+        .row
+            .small-12.columns
+                //- get the page title & description from the global nav data object; id is position in object
+                +pageHeader(4)
+    main
+        section#content-top.section-article
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Labels
+                    p.lead Good for tags or info
+                    .group
+                        span.label Basic Default Label 
+                        span.label.success Success 
+                        span.label.secondary Secondary 
+                        span.label.alert Alert
+                    .group
+                        p(aria-describedby='emailLabel1 emailLabel2') For improved #[code a11y], labels can be associated with an element that they describe.
+                        span#emailLabel1.label High Priority
+                        span#emailLabel2.label Unread
+            hr.divider
+            .row
+                .columns.small-12.section-article--header-group
+                    h1.section-article--header Buttons
+                    //- p.lead Good for tags or info
+            .row.small-up-1.medium-up-2
+                .column.group
+                    .primary.callout
+                        p Add the attribute #[code type="button"] to #[code button] elements, unless the button submits a form, in which case you use #[code type="submit"]
+                    // Anchors (links)
+                    a.button(href='about.html') Learn More
+                    a.button(href='#features') View All Features
+                    // Buttons (actions)
+                    button.success.button(type='button') Save
+                    button.alert.button(type='button') Delete
+
+                .column.group
+                    h3 Sizing
+                    p Additional classes can be added to your button to change its size and shape.
+                    a.tiny.button(href='#') So Tiny
+                    a.small.button(href='#') So Small
+                    a.button(href='#') So Basic
+                    a.large.button(href='#') So Large
+                    a.expanded.button(href='#') Such Expand
+                    a.small.expanded.button(href='#') Wow, Small Expand
+
+                .column.group
+                    h3 Coloring
+                    p Give a button additional meaning by adding a coloring class, or .disabled to create a faded appearance.
+                    .primary.callout
+                        p The #[code .disabled] class is purely visual style, and won’t actually disable a control. For #[code button] elements, you can add the #[code disabled] attribute to disable it. If you want to disable a link, you should add the aria-disabled attribute to mark it as disabled for assistive technology.
+                    a.secondary.button(href='#') Secondary Color
+                    a.success.button(href='#') Success Color
+                    a.alert.button(href='#') Alert Color
+                    a.warning.button(href='#') Warning Color
+                    a.disabled.button(href='#') Disabled Button
+
+                .column.group
+                    h3 Hollow Style
+                    p Add the .hollow class to a button to give it a hollow style. Change the $button-fill variable in your settings file to hollow to make this the default style. Changing this setting will remove the .hollow class from your CSS.
+                    button.hollow.button(href='#') Primary Color
+                    button.secondary.hollow.button(href='#') Secondary Color
+                    button.success.hollow.button(href='#') Success Color
+                    button.alert.hollow.button(href='#') Alert Color
+                    button.warning.hollow.button(href='#') Warning Color
+
+                .column.group
+                    h3 Dropdown Arrows
+                    p Add a dropdown arrow to your button with the .dropdown class.
+                    .primary.callout
+                        p This doesn’t add dropdown functionality automatically. To do that, you can attach our #[a(href='dropdown.html') Dropdown plugin].
+                    button.tiny.dropdown.button Dropdown Button
+                    button.small.dropdown.button Dropdown Button
+                    button.dropdown.button Dropdown Button
+                    button.large.dropdown.button Dropdown Button
+                    button.expanded.dropdown.button Dropdown Button
+
+                .column.group
+                    h3 Accessibility
+                    :marked
+                        Make sure that the text of the button is descriptive. If for some reason, your button contains no readable text (for example, just a symbol or icon), add screen reader-only text to the button to clarify it’s purpose. The symbol or icon should be wrapped in an element with the attribute `aria-hidden="true"`, to prevent screen readers from trying to pronounce the symbol. Use the `.show-for-sr` class to define screen reader-only text.
+                    button.button(type='button')
+                        // Screen readers will see "close"
+                        span.show-for-sr Close
+                        // Visual users will see the X, but not the "Close" text
+                        span(aria-hidden='true')
+                            i.fi-x
+
+block footer
+    include /_partials/_footer
