@@ -15,15 +15,16 @@ block content
         .row
             .small-12.columns
                 //- get the page title & description from the global nav data object; id is position in object
-                +pageHeader(4)
+                +pageHeader(5)
     main
         section#content-top.section-article
             .row
                 .columns.small-12.section-article--header-group
                     h1.section-article--header Form Basics
-                    p.lead Creating a form in Foundation is designed to be easy but extremely flexible. Forms are built with a combination of standard form elements, as well as grid rows and columns.
+                    p.lead Creating a form in Foundation is designed to be easy but extremely flexible. Forms are built with a combination of standard form elements, as well as grid rows and columns. This page is based on the #[a(href="http://foundation.zurb.com/sites/docs/forms.html") forms documentation page.]
                     hr.divider
-                .columns.small-12
+            .row.small-up-1.medium-up-2
+                .column.group
                     :marked
                         #### Text Inputs
                     
@@ -36,11 +37,132 @@ block content
                             .medium-6.columns
                                 label Input Label
                                     input(type='text', placeholder='.medium-6.columns')
-                .columns.small-12
+                .column.group
                     h4 Number Inputs
-                    p
-                        | In most desktop browsers, #[code input type="number"] elements will have up/down controls inside them, which increment and decrement the number inside the field. These are called #[strong spin buttons]. You can disable them by setting the #[code $input-number-spinners] Sass variable to #[code false].
+                    p In most desktop browsers, #[code &lt;input type="number"&gt;] elements will have up/down controls inside them, which increment and decrement the number inside the field. These are called #[strong spin buttons]. You can disable them by setting the #[code $input-number-spinners] Sass variable to #[code false].
                     label How many puppies?
                         input(type='number', value='100', size='10')
+                .column.group
+                    h4 Text areas
+                    p
+                        | The #[code &lt;textarea&gt;] element creates a multi-line text input.
+
+                    label
+                        | What books did you read over summer break?
+                        textarea(placeholder='None')
+
+                .column.group
+                    h4 Select Menus
+                    p Use select menus to combine many choices into one menu.
+
+                    label Select Menu
+                        select
+                            option(value='husker') Husker
+                            option(value='starbuck') Starbuck
+                            option(value='hotdog') Hot Dog
+                            option(value='apollo') Apollo
+
+                .column.group
+                    h4 Checkoxes and Radio Buttons
+                    p Use groups of checkboxes when the user may select multiple choices from a list, and use radio buttons when the user must select just one choice.
+                    p Wrap a group of checkboxes or radio buttons in a #[code &lt;fieldset&gt;] element, and give them a common label using the #[code &lt;legend&gt;] element. Each individual control should also have its own label, created using a typical #[code &lt;label&gt;].
+                    .row
+                        fieldset.large-6.columns
+                            legend Choose Your Favorite
+                            input#pokemonRed(type='radio', name='pokemon', value='Red', required='')
+                            label(for='pokemonRed') Red
+                            input#pokemonBlue(type='radio', name='pokemon', value='Blue')
+                            label(for='pokemonBlue') Blue
+                            input#pokemonYellow(type='radio', name='pokemon', value='Yellow')
+                            label(for='pokemonYellow') Yellow
+                        fieldset.large-6.columns
+                            legend Check these out
+                            input#checkbox1(type='checkbox')
+                            label(for='checkbox1') Checkbox 1
+                            input#checkbox2(type='checkbox')
+                            label(for='checkbox2') Checkbox 2
+                            input#checkbox3(type='checkbox')
+                            label(for='checkbox3') Checkbox 3
+
+                .column.group
+                    h4 Fieldset Styles
+                    p To encourage their use as an accessibility tool, the #[code &lt;fieldset&gt;] element is no longer styled by default. Those styles are now contained in the #[code .fieldset] class.
+                    fieldset.fieldset
+                        legend Check these out
+                        input#checkbox12(type='checkbox')
+                        label(for='checkbox12') Checkbox 1
+                        input#checkbox22(type='checkbox')
+                        label(for='checkbox22') Checkbox 2
+                        input#checkbox32(type='checkbox')
+                        label(for='checkbox32') Checkbox 3
+
+                .column.group
+                    h4 Help Text
+                    p Place help text below a field to clarify it's purpose. Whenever you use help text, give the text a unique ID, and add the attribute #[code aria-describedby] to the input.
+                    label Password
+                        input(type='password', aria-describedby='passwordHelpText')
+                        p#passwordHelpText.help-text Your password must have at least 10 characters, a number, and an Emoji.
+
+                .column.group
+                    h4 Label Positioning
+                    p Sometimes you want a form with labels to the left of your inputs. Piece of cake! You can put the label inside a different column to the left of the input. Then use the class #[code .text-right] or #[code .float-right] (or add #[code text-align: right] yourself) to realign the label.
+                    .warning.callout
+                        p In a #[a(href='rtl.html') right-to-left] environment, use #[code .float-left] instead.
+                    form
+                        .row
+                            .small-3.columns
+                                label.text-right(for='right-label') Label
+                            .small-9.columns
+                                input#right-label(type='text', placeholder='Right-aligned text input')
+                    .row
+                        .small-3.columns
+                            label.text-right(for='right-label') Label
+                        .small-9.columns
+                            input#right-label(type='text', placeholder='Right-aligned text input')
+
+                    p Add the #[code .middle] class to vertically align the label with its input.
+                    form
+                        .row
+                            .small-3.columns
+                                label.text-right.middle(for='middle-label') Label
+                            .small-9.columns
+                                input#middle-label(type='text', placeholder='Right- and middle-aligned text input')
+                    .row
+                        .small-3.columns
+                            label.text-right.middle(for='middle-label') Label
+                        .small-9.columns
+                            input#middle-label(type='text', placeholder='Right- and middle-aligned text input')
+                .column.group
+                    h4 Inline Labels and Buttons
+                    p To attach extra text or controls to the left or right of an input field, wrap the elements in an #[code .input-group] container, then add these classes to the elements inside:
+                    
+                    .primary.callout
+                        p This component supports flexbox mode. 
+                            #[a(href='flexbox.html') Learn how to enable flexbox mode].
+                    .input-group
+                        span.input-group-label $
+                        input.input-group-field(type='number')
+                        .input-group-button
+                            input.button(type='submit', value='Submit')
+
+                .column.group
+                    h4 File Upload Button
+                    p Use #[code &lt;input type="file"&gt;] to create a file upload button. For security reasons, most browsers don't let you style file inputs. To work around that, we can style a form label as a button, and point it to the #[code &lt;input&gt;]. To properly mask the input, the #[code .show-for-sr] class is added.
+
+                    label.button(for='exampleFileUpload') Upload File
+                    input#exampleFileUpload.show-for-sr(type='file')
+
+                .column.group
+                    h4 Custom Controls
+                    p Custom form controls, like date pickers, range sliders, or switches need some extra attention to be made accessible. Our custom inputs, such as the range slider and switch, do most of this work for you.
+                    p Custom inputs with labels or help text need the attributes #[code aria-labelledby] and #[code aria-describedby] added to them, so screen readers know how to describe the control.
+
+                    label#ageLabel Age
+                    .slider(aria-labelledby='ageLabel', aria-describedby='ageHelpText', data-slider='', data-initial-start='50', data-end='200')
+                        span.slider-handle(data-slider-handle='', role='slider', tabindex='1')
+                        span.slider-fill(data-slider-fill='')
+                        input(type='hidden')
+                    p#ageHelpText How old are you?
+
 block footer
     include /_partials/_footer
